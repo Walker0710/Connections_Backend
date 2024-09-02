@@ -17,12 +17,15 @@ const limiter = RateLimit({
 const host = "4.240.104.73";
 const port = 8080;
 
-app.use(limiter);
+
 
 dotenv.config();
 
 const https = require('https')
 const app = express();
+
+app.use(limiter);
+
 // const port = process.env.PORT || 5000;
 
 connectDB();
